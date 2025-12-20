@@ -1,10 +1,14 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
+# Python-generated files (ALL subdirectories)
+**/__pycache__/
+**/*.py[cod]
+
+# Build artifacts
 build/
 dist/
 wheels/
-*.egg-info
+**/*.egg-info/
 
 # Virtual environments
-.venv
+.venv/
+
+data/
