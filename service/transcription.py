@@ -6,9 +6,8 @@ from core.paths import get_transcript_dir
 from model.transcript import Transcript, TranscriptSegment
 
 
-# Model'i global tutuyoruz (1 kere load edilir)
 _MODEL = WhisperModel(
-    "medium",              # <-- ÖNEMLİ DÜZELTME
+    "medium",
     compute_type="int8",
 )
 
