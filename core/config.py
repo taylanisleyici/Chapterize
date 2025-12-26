@@ -9,6 +9,7 @@ AUDIO_DIR = "audio"
 TRANSCRIPT_DIR = "transcript"
 CHAPTER_DIR = "chapter"
 VIDEO_DIR = "video"
+FRAME_DIR = "frame"
 SUBTITLE_DIR = "subtitle"
 SHORT_DIR = "short"
 
