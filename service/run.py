@@ -3,12 +3,15 @@ from domain.audio import Audio
 from domain.video import Video, VideoType
 from service.download_audio import download_audio
 from service.download_video import download_video
+from utils.cleanup import cleanup_data_dir, move_shorts_to_final
 
 
 def run_pipeline(youtube_url: str) -> None:
     """
     Full pipeline to create shorts from a YouTube video.
     """
+    cleanup_data_dir()
+
     lock_file = Paths.get_lock_file()
     if lock_file.exists():
         raise RuntimeError("Pipeline is already running. Lock file exists.")
@@ -47,6 +50,7 @@ def run_pipeline(youtube_url: str) -> None:
                 output_path=Paths.get_short_output_dir()
                 / f"{short.subtitle_path.stem}.mp4",
             )
+        move_shorts_to_final()
     finally:
         if lock_file.exists():
             lock_file.unlink()
