@@ -15,7 +15,7 @@ The pipeline performs the following steps:
     - If a streamer is detected: Applies a **Split-Screen** layout (Streamer Top / Content Bottom).
     - If no streamer is detected: Applies a standard **Center Crop**.
 - **Dynamic Subtitles:**
-  - Burns ASS subtitles into the video.
+  - Burns A\*\* subtitles into the video.
   - Applies **Contextual Coloring** to speakers based on talk-time rank (e.g., Main Speaker = White, Secondary = Gold).
 - **Production:** Outputs final short videos ready for publishing.
 
